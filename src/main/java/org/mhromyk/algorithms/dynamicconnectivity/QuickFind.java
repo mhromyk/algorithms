@@ -1,10 +1,10 @@
 package org.mhromyk.algorithms.dynamicconnectivity;
 
-public class UF implements UnionFind {
+public class QuickFind implements UnionFind {
 
     private int element[] ;
 
-    public UF(int n){
+    public QuickFind(int n){
         element = new int[n];
 
         for (int i=0;i<n;i++){
@@ -19,9 +19,9 @@ public class UF implements UnionFind {
     public void union(int p, int q) {
         if (!connected(p,q)){
             int componentsForP = element[p];
-            for (int anElement : element) {
-                if(anElement==element[p]){
-                    element[p] = element[q];
+            for (int i=0;i<element.length;i++) {
+                if(element[i]==componentsForP){
+                    element[i] = element[q];
                 }
             }
         }
@@ -40,7 +40,7 @@ public class UF implements UnionFind {
             stringBuilder.append(element[i]+" | ");
         }
         stringBuilderHeader.append(" ]");
-        stringBuilder.append(" ]");
+        stringBuilder.append(" ]\n");
 
         return stringBuilderHeader.append("\n").append(stringBuilder.toString()).toString();
     }
