@@ -28,7 +28,7 @@ public class QuickUnionWeighted implements UnionFind {
 
         if (depth[p]<=depth[q]){
             element[pRoot]=qRoot;
-            depth[]
+           // depth[]
         }
 
     }
