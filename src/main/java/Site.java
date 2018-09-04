@@ -32,10 +32,6 @@ public class Site {
         }
     }
 
-    public void makeFullSite(int i){
-        site[i]=State.FULL;
-    }
-
     public int getSize() {
         return size;
     }

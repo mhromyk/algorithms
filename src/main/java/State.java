@@ -1,1 +1,1 @@
-public enum State {CLOSED, OPENED, FULL}
+public enum State {CLOSED, OPENED}
