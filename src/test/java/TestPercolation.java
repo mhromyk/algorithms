@@ -31,6 +31,11 @@ public class TestPercolation {
 
     @Test
     public void testPercolation(){
-
+        Assert.assertFalse(percolation.percolates());
+        percolation.open(1,1);
+        percolation.open(2,1);
+        percolation.open(2,2);
+        percolation.open(3,2);
+        Assert.assertTrue(percolation.percolates());
     }
 }

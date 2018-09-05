@@ -6,7 +6,7 @@ import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 public class Percolation {
     private WeightedQuickUnionUF graph;
     private int sizeOfTheGrid;
-    //        initialize array for tracking state of the sites.
+    // initialize array for tracking state of the sites.
     private Site sites;
 
     // virtual node for simplifying checking percolation by joining all opened nodes from top row with virtual top node and as a result we will check percolation staring from virtual top node.
@@ -87,7 +87,8 @@ public class Percolation {
 
     // number of open sites
     public int numberOfOpenSites(){
-        return sites.getOpenedSites();
+        // Subtract two Virtual Sites (virtualTop, virtualDown)
+        return sites.getOpenedSites()-2;
     }
 
     // does the system percolate?
