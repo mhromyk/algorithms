@@ -14,12 +14,14 @@
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
         <version>4.12</version>
-        <scope>test</scope>
     </dependency>
+
        <dependency>
-           <groupId>junit</groupId>
-           <artifactId>junit</artifactId>
-           <version>RELEASE</version>
+           <groupId>com.sample</groupId>
+           <artifactId>sample</artifactId>
+           <version>1.0</version>
+           <scope>system</scope>
+           <systemPath>${project.basedir}/lib/algs4.jar</systemPath>
        </dependency>
    </dependencies>
 

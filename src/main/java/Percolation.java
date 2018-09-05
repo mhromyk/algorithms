@@ -4,7 +4,7 @@
 import edu.princeton.cs.algs4.WeightedQuickUnionUF;
 
 public class Percolation {
-   private WeightedQuickUnionUF graph;
+    private WeightedQuickUnionUF graph;
     private int sizeOfTheGrid;
     //        initialize array for tracking state of the sites.
     private Site sites;
@@ -21,11 +21,11 @@ public class Percolation {
     // create n-by-n grid, with all sites blocked
     public Percolation(int n){
         sizeOfTheGrid = n;
-        graph = new WeightedQuickUnionUF(n+2);
-        virtualTop = n;
-        virtualDown = n+1;
+        graph = new WeightedQuickUnionUF(n*n+2);
+        virtualTop = n*n;
+        virtualDown = n*n+1;
 
-        sites = new Site(n+2);
+        sites = new Site(n*n+2);
         // open VirtualTop and VirtualBottom sites to be ready for connection
         sites.openSite(virtualTop);
         sites.openSite(virtualDown);
